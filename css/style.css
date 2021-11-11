@@ -24,10 +24,7 @@
   display: -ms-flexbox;
   display: flex;
   font-size: 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 70px;
+  height: 104px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -36,25 +33,25 @@
 @media (max-width: 767.98px) {
   .header__body {
     height: 50px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 .header__logo {
   color: #252B42;
-  font-size: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
   z-index: 3;
   display: block;
-}
-
-@media (max-width: 992.98px) {
-  .header__logo {
-    font-size: 35px;
-  }
+  margin-right: 133px;
 }
 
 @media (max-width: 767.98px) {
   .header__logo {
-    font-size: 25px;
+    font-size: 20px;
     padding: 0 0 0 20px;
   }
 }
@@ -155,10 +152,11 @@
 }
 
 .header__link {
-  color: #252B42;
-  text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: 1.5px;
+  color: #737373;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-weight: 600;
 }
 
 .header__link:hover {
