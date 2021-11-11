@@ -1,0 +1,28 @@
+//GRID
+$mw: 1180px;
+$md1:$mw+12;
+$md2:992.98;
+$md3:767.98;
+$md4:479.98;
+
+body{
+	@media (max-width: $md3+px){
+		&.lock{
+			overflow: hidden;
+		}
+	}
+}
+.contant {
+	margin: 80px 0px 0px 0px;
+	@media (max-width: $md3+px){
+		margin: 60px 0px 0px 0px;
+	}
+}
+.contant__text {
+	font-size: 17px;
+	line-height: 25px;
+	p{
+		margin: 0px 0px 20px 0px;
+	}
+}
+
