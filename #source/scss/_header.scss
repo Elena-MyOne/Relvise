@@ -129,10 +129,13 @@ header{}
 .header__link {
 	color: $textClr2;
 	font-size: 14px;
-	line-height: 24px;
+	line-height: calc(24 / 14 * 100%);
 	letter-spacing: 0.2px;
 	font-weight: 600;
 	&:hover{
 			color: #FFB327;
 		}
+}
+.changeBgc{
+	background-color: #fff;
 }
