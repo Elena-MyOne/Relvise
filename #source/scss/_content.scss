@@ -38,6 +38,8 @@ main {
 	}
 	&__advantages {
 	}
+	&__practice {
+	}
 }
 
 .header-block {
@@ -268,3 +270,79 @@ main {
 }
 
 //4====================================
+.practice {
+	padding: 125px 0px 80px 0px;
+	@media (max-width: $md2+px){
+		padding: 40px 0px 80px 0px;
+	}
+	@media (max-width: $md3+px){
+		padding: 0px 0px 40px 0px;
+	}
+	&__header {
+		margin: 0px 0px 45px 0px;
+		@media (max-width: $md3+px){
+			margin: 0px 0px 25px 0px;
+		}
+	}
+	&__body {
+		margin: 0px -20px -30px;
+		@include flexbox();
+		flex-wrap: wrap;
+	}
+	&__column {
+		padding: 0px 20px;
+		margin: 0px 0px 30px 0px;
+		font-size: 14px;
+		flex: 0 1 25%;
+		@media (max-width: $md2+px){
+			flex: 0 1 50%;
+		}
+		@media (max-width: 550px){
+			flex: 0 1 100%;
+		}
+	}
+	&__item {
+
+	}
+}
+
+.item-practice {
+	background-color: #fff;
+	@include flexbox();
+	flex-direction: column;
+	height: 100%;
+	&__content{
+		padding: 30px;
+		flex: 1 1 auto;
+	}
+	&__link {
+		color: inherit;
+		display: inline-block;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__title {
+		letter-spacing: 0.1px;
+		font-size: 16px;
+		line-height: 1.5;
+		cursor: pointer;
+		font-weight: 700;
+	}
+	&__text {
+		color: $textClr2;
+		line-height: 1.42;
+		font-size: 14px;
+	}
+
+	&__image {
+		padding-bottom: 60%;
+		display: block;
+	}
+}
+
+.item-practice__link:not(:last-child) {
+	margin: 0px 0px 15px 0px;
+}
+
+//5========================================
