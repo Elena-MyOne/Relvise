@@ -1,3 +1,132 @@
 footer{
 	font-size: 14px;
 }
+
+.footer {
+
+	&__top {
+		background-color: $bgClr2;
+		padding: 35px 0px;
+	}
+	&__row{
+		@include flexbox();
+		font-size: 14px;
+		flex-wrap: wrap;
+		margin: 0px -10px;
+	}
+	&__column {
+		flex: 0 1 16.6667%;
+		padding: 15px 10px;
+		color: #fff;
+		&:last-child {
+			flex: 0 1 33.334%;
+		}
+		@media (max-width: $md2+px){
+			flex: 0 1 25%;
+			&:last-child {
+				flex: 1 1 100%;
+			}
+		}
+		@media (max-width: 700px){
+			flex: 0 1 50%;
+			&:last-child {
+				flex: 1 1 100%;
+			}
+		}
+	}
+	&__label {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: 0.1px;
+		margin: 0px 0px 20px 0px;
+	}
+	&__menu {
+	}
+	&__contacts {
+	}
+	&__bottom {
+		padding: 25px 0px;
+	}
+	&__copy {
+		font-weight: 600;
+		line-height: 1.7;
+		color: $textClr2;
+		letter-spacing: 0.2px;
+		@media (max-width: 767px){
+			&:not(:last-child){
+				margin: 0px 0px 10px 0px;
+			}
+		}
+	}
+	&__social {
+	}
+}
+.container {
+	&_main {}
+	&_bottom {
+		@include flexbox();
+			font-size: 14px;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+		@media (max-width: 767px){
+			flex-direction: column;
+		}
+	}
+}
+.menu-footer {
+	&__list {
+	}
+	&__item {
+		&:hover {
+			text-decoration: underline;
+		}
+		&:not(:last-child){
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	&__link {
+		color: inherit;
+		letter-spacing: 0.2px;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.7;
+	}
+}
+.contacts-footer {
+	@include flexbox();
+	flex-direction: column;
+	&__item {
+		padding:  0px 0px 0px 34px;
+		@include flexbox();
+		align-items: center;
+		color: inherit;
+		min-height: 30px;
+		font-size: 14px;
+		line-height: 1.42;
+		&:not(:last-child){
+			margin: 0px 0px 12px 0px;
+		}
+		&_phone {
+			background: url('../img/footer/phone.svg') 0 0 no-repeat;
+		}
+		&_map {
+			background: url('../img/footer/location.svg') 0 0 no-repeat;
+		}
+		&_email {
+			background: url('../img/footer/mail.svg') 0 0 no-repeat;
+		}
+	}
+}
+.social {
+	&__item {
+		&:not(:last-child){
+			margin: 0px 20px 0px 0px;
+		}
+		&:hover{
+			opacity: 0.5;
+		}
+	}
+}
+

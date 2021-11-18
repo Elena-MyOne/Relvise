@@ -42,6 +42,15 @@ main {
 	}
 	&__whoweare {
 	}
+	&__clients {
+	}
+	&__subscribe:not(:last-child) {
+		margin: 0px 0px 10px 0px;
+	}
+	&__getintouch {
+	}
+	&__contact {
+	}
 }
 
 .header-block {
@@ -126,10 +135,22 @@ main {
 		&_orange {
 			background-color: $btnOrange;
 			color: #fff;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				background-color: #fff;
+				color: $btnOrange;
+				transition: all 0.3s ease 0s;
+			}
 		}
 		&_border {
 			color: $bgElement;
 			border: 1px solid #0D5C63;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				background-color: #0D5C63;
+				color: #fff;
+				transition: all 0.3s ease 0s;
+			}
 		}
 		@media (max-width: $md4+px){
 			margin: 10px 0;
@@ -350,6 +371,7 @@ main {
 //5========================================
 .whoweare {
 	padding:  80px 0px 130px 0px;
+	background-color: #fff;
 	@media (max-width: 950px){
 		padding:  50px 0px 50px 0px;
 	}
@@ -455,4 +477,267 @@ main {
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+}
+
+//6==========================================
+.clients {
+	padding: 50px 0px;
+	@media (max-width: $md3+px){
+		padding: 30px 0px;
+	}
+	&__itmes {
+		@include flexbox();
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	&__item {
+		padding: 8px 15px;
+		flex: 0 1 16.6667%;
+		text-align: center;
+		min-width: 140px;
+		img{
+			max-width: 100%;
+		}
+	}
+}
+
+//7===============================================
+.subscribe {
+	position: relative;
+	padding:  0px 0px 20px 0px;
+	&::before{
+		content: "";
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 77px;
+		background-color: $bgClr1;
+	}
+	&__body {
+		padding: 30px 50px;
+		align-items: center;
+		background-color: $bgClr2;
+		border-radius: 2px;
+		position: relative;
+		z-index: 2;
+		@media (min-width: 1070px){
+			margin: 0px 30px;
+		}
+		@media (min-width: 810px){
+			@include flexbox();
+			justify-content: space-between;
+		}
+		@media (max-width: 810px){
+			margin: 0px -15px;
+			padding: 20px 15px;
+		}
+	}
+	&__title {
+		color: #fff;
+		font-size: 24px;
+		line-height: 1.33;
+		font-weight: 700;
+		letter-spacing: 0.1px;
+		@media (max-width: 810px){
+			margin: 0px 0px 20px 0px;
+		}
+		@media (min-width: 810px){
+			max-width: 266px;
+		}
+	}
+	&__form {
+		flex: 0 1 50%;
+		@include flexbox();
+		align-items: center;
+	}
+	&__input {
+		width: 100%;
+		flex: 1 1 auto;
+		min-height: 58px;
+		padding: 0px 20px;
+		border-radius: 5px 0px 0px 5px;
+		background: #F9F9F9;
+		border: 1px solid #E6E6E6;
+		border-right: 0px;
+		color: $textClr2;
+		&:focus{
+			color: #000;
+		}
+		@media (max-width: 810px){
+			padding: 0px 15px;
+		}
+	}
+	&__button {
+		@include flexbox();
+		background-color: $btnOrange;
+		border: 1px solid #E6E6E6;
+		border-radius: 0px 5px 5px 0px;
+		min-height: 58px;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		text-align: center;
+		letter-spacing: 0.2px;
+		color: #fff;
+		padding: 0px 22px;
+		transition: all 0.3s ease 0s;
+			&:hover {
+				color: #000;
+				transition: all 0.3s ease 0s;
+			}
+		@media (min-width: 810px){
+			padding: 0px 15px;
+		}
+	}
+}
+
+//8===================================
+.getintouch {
+	padding: 80px 0px 135px 0px;
+	@media (max-width: 992px){
+		padding: 50px 0px 50px 0px;
+	}
+	&__header {
+		padding: 0px 0px 80px 0px;
+		@media (max-width: 992px){
+			padding: 0px 0px 50px 0px;
+		}
+		@media (max-width: $md3+px){
+			padding: 0px 0px 30px 0px;
+		}
+	}
+	&__items {
+		margin: 0px -15px;
+		@media (min-width: 992px){
+			@include flexbox();
+			align-items: center;
+			margin: 0px;
+		}
+	}
+	&__item {
+		flex: 0 1 33.333%;
+	}
+}
+
+.item-getintouch {
+	@include flexbox();
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	background-color: #fff;
+	padding: 50px 15px;
+	&_active {
+		background-color: $bgClr1;
+		color: #fff;
+		padding: 80px 15px;
+		@media (max-width: 992px){
+			padding: 50px 15px;
+		}
+	}
+	&__icon {}
+	&__emails {
+		@include flexbox();
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__email {
+		color: inherit;
+		font-weight: 600;
+		line-height: 1.5;
+		font-size: 16px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&__label {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	&__button {
+		border: 1px solid #FF7B47;
+		color: $btnOrange;
+		min-height: 44px;
+		@include flexbox();
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.42;
+		letter-spacing: 0.2px;
+		padding: 5px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			background-color: $btnOrange;
+			color: #fff;
+			border: 1px solid #FF7B47;
+			transition: all 0.3s ease 0s;
+		}
+		&_active {
+			border: 1px solid #fff;
+			color: #fff;
+		}
+	}
+}
+
+.item-getintouch > *:not(:last-child){
+	margin: 0px 0px 15px 0px;
+}
+
+//9===================================
+.contact {
+	background-color: #fff;
+	padding: 42px 0px;
+	&__body {
+		@media (min-width:767px){
+			@include flexbox();
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+	&__content {
+		padding:  0px 0px 20px 0px;
+	}
+	&__title {
+		font-size: 24px;
+		letter-spacing: 0.1px;
+		line-height: 1.33;
+		font-weight: 700;
+	}
+	&__text {
+		font-size: 14px;
+		color: $textClr2;
+		font-weight: 500;
+		line-height: 1.42;
+		letter-spacing: 0.2px;
+	}
+	&__button {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 14px;
+		min-height: 58px;
+		padding: 5px 40px;
+		background-color: $btnOrange;
+		border-radius: 5px;
+		color: #fff;
+		transition: all 0.3s ease 0s;
+		border: 1px solid #FF7B47;
+		&:hover {
+			background-color: #fff;
+			color: $btnOrange;
+			transition: all 0.3s ease 0s;
+		}
+	}
+}
+
+.contact__content > *:not(:last-child){
+	margin: 0px 0px 10px 0px;
 }
